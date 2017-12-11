@@ -6,9 +6,23 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit613c437d20cb9b09c3444b5074550433
 {
+    public static $classMap = array (
+        'App\\Controller\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Controller\\UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
+        'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
+        'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'ComposerAutoloaderInit613c437d20cb9b09c3444b5074550433' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInit613c437d20cb9b09c3444b5074550433' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->classMap = ComposerStaticInit613c437d20cb9b09c3444b5074550433::$classMap;
 
         }, null, ClassLoader::class);
     }

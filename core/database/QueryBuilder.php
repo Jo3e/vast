@@ -9,9 +9,14 @@ class QueryBuilder
         $this->pdo = $pdo;
     }
 
-    public function store()
+    public function insert($table, $data = [])
     {
-        // store to db
+        // insert to db
+    }
+
+    public function retrieve($table, $data = [])
+    {
+        // get data from database
     }
 }
 
